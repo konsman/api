@@ -1,4 +1,5 @@
-// PUBLIC DOMAIN
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;// PUBLIC DOMAIN
 
 var seneca = require('seneca')()
  .use('seneca-entity')
@@ -13,5 +14,5 @@ var seneca = require('seneca')()
 var app = require('express')()
       .use( require('body-parser').json() )
       .use( seneca.export('web') )
-      .listen(3000)
+      .listen(port,host)
 
