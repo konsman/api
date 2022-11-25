@@ -1,6 +1,7 @@
 // PUBLIC DOMAIN
 
 var seneca = require('seneca')()
+ .use('seneca-entity')
       .use('./product_catalog')
       .use('./api')
       .ready(function(){
